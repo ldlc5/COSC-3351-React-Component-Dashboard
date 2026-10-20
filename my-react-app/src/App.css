@@ -71,3 +71,12 @@
 .reminder{
   border-left: 5px lime solid;
 }
+.control{
+  display: grid;
+  grid-auto-rows: 1fr;
+  height: 100%;
+  width: 50%;
+  padding: 20px 100px;
+  color: white;
+  align-items: center;
+}
