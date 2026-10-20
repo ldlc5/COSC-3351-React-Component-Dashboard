@@ -9,16 +9,19 @@ const AddTask = ({onAdd}) => {
     // Prevents page refresh.
     e.preventDefault()
 
+    // Popup when task fields are empty.
     if(!text){
       alert("Add a task.")
       return
     }
+    // After adding, reset fields.
     onAdd({text, time, reminder})
     setText("")
     setTime("")
     setReminder(false)
   }
 
+  // Add task layout.
   return (
     <form onSubmit={onSubmit}>
         <div className="control">

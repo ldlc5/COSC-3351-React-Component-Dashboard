@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 body{
   font-family: Georgia, 'Times New Roman', Times, serif;
   background-color: #e6e0db;
@@ -41,6 +45,7 @@ input{
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: #242325;
   padding: 5px;
+  font-size: 16px;
 }
 
 .container{
