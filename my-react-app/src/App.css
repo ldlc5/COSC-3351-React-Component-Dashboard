@@ -1,82 +1,88 @@
-.counter {
-  font-size: 16px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  color: var(--accent);
-  background: var(--accent-bg);
-  border: 2px solid transparent;
-  transition: border-color 0.3s;
-  margin-bottom: 24px;
-
-  &:hover {
-    border-color: var(--accent-border);
-  }
-  &:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-  }
-}
-
-#center {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  place-content: center;
-  place-items: center;
-  flex-grow: 1;
-
-  @media (max-width: 1024px) {
-    padding: 32px 20px 24px;
-    gap: 18px;
-  }
-}
-
-#spacer {
-  height: 88px;
-  border-top: 1px solid var(--border);
-  @media (max-width: 1024px) {
-    height: 48px;
-  }
+body{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: #e6e0db;
+  color: #242325;
 }
 
 .header{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px;
+}
+
+h1{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 40px;
+  color: #27425c
+}
+
+h2{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 30px;
+  color: #27425c
+}
+
+h3{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
+  color: #5b865e;
+}
+
+h4{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #6c8c99;
+}
+
+input{
+  background-color: #ffffffd5;
+  border: 2px #f3f1ef inset;
+  border-radius: 5px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #242325;
+  padding: 5px;
 }
 
 .container{
+  background-color: #f3f1ef;
   margin: 50px;
-  border: 2px solid;
+  border: 2px #ccc1b3 solid;
   border-radius: 10px;
   padding: 20px 50px;
 }
 
 .btn{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   padding: 10px;
   cursor: pointer;
+  background-color: #242325;
+  border: 1px #242325 outset;
+  color: #f3f1ef;
+  border-radius: 10px;
+  font-size: 16px;
 }
 
 .task{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #747171;
+  background-color: #ffffff71;
+  border: 2px #ccc1b3 solid;
   margin: 20px;
   padding: 5px 25px;
   border-radius: 10px;
-  color: #fff;
 }
 
 .reminder{
-  border-left: 5px lime solid;
+  border-left: 5px #99c59c solid;
 }
+
 .control{
   display: grid;
   grid-auto-rows: 1fr;
   height: 100%;
   width: 50%;
   padding: 20px 100px;
-  color: white;
+  margin: auto;
   align-items: center;
 }

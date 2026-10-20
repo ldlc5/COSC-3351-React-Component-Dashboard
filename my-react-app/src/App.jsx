@@ -3,23 +3,27 @@ import './App.css'
 import Header from './components/Header';
 import Tasks from './components/Tasks';
 import AddTask from "./components/AddTask";
+import Footer from "./components/Footer";
+import About from "./components/About";
 
 function App() {
+  const [defaultPage, changeDefaultPage] = useState (true)
+
   const [showAddTask, setShowAddTask] = useState (false)
 
   const [tasks, setTasks] = useState([
         {id: 1,
-        text: "Example",
+        text: "Make breakfast",
         time: "8:00AM",
         reminder: false},
         {id: 2,
-        text: "Example 2",
-        time: "1:00PM",
-        reminder: false},
+        text: "Walk the dog",
+        time: "10:00AM",
+        reminder: true},
         {id: 3,
-        text: "Example 3",
-        time: "5:00PM",
-        reminder: false},
+        text: "Order lunch",
+        time: "1:00PM",
+        reminder: true},
     ])
 
   const addTask = (task) => {
@@ -41,10 +45,13 @@ function App() {
 
   return (
     <div className="container">
-      <Header onAdd={() => setShowAddTask(!showAddTask)} showAdd={showAddTask} />
-      {showAddTask && <AddTask onAdd={addTask} />}
-      {tasks.length>0 ? (<Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder}/>) 
-      : ("All tasks completed!")}
+      {defaultPage ? (
+        <><Header onAdd={() => setShowAddTask(!showAddTask)} showAdd={showAddTask} />
+        {showAddTask && <AddTask onAdd={addTask} />}
+        {tasks.length>0 ? (<Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder}/>) 
+        : ("All tasks completed!")}</>
+        ) : ( <About /> )}
+      <Footer onClick={() => changeDefaultPage(!defaultPage)} changeDefault={defaultPage} />
     </div>
   );
 }
